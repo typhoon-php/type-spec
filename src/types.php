@@ -35,7 +35,7 @@ function types(): \Generator
     yield new Type('object', 'object', [new Property('properties', 'array', 'array<non-empty-string, Property>')]);
     yield new Type('callable', 'callable', [new Property('templates', 'array', 'list<TemplateT>'), new Property('parameters', 'array', 'list<Parameter>'), new Property('returnType', $typeClass, 'Type<mixed>')]);
     // reference
-    yield new Type('template', 'mixed', [new Property('name', 'string', 'non-empty-string'), new Property('variance', 'Variance'), new Property('upperBound', $typeClass)]);
+    yield new Type('template', 'mixed', [new Property('name', 'string', 'non-empty-string'), new Property('variance', 'Typhoon\Type\Variance'), new Property('upperBound', $typeClass)]);
     yield new Type('constant', 'mixed', [new Property('name', 'string', 'non-empty-string')]);
     yield new Type('classConstant', 'mixed', [new Property('objectType', $typeClass, 'Type<object>'), new Property('name', 'string', 'non-empty-string')]);
     yield new Type('classConstantMask', 'mixed', [new Property('objectType', $typeClass, 'Type<object>'), new Property('namePrefix', 'string')]);
