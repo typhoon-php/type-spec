@@ -1,6 +1,6 @@
 {
-    "name": "typhoon/template",
-    "description": "Typhoon Template",
+    "name": "typhoon/type-spec",
+    "description": "Typhoon Type Spec",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -23,12 +23,15 @@
     },
     "autoload": {
         "psr-4": {
-            "Typhoon\\Template\\": "src/"
-        }
+            "Typhoon\\TypeSpec\\": "src/"
+        },
+        "files": [
+            "src/types.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
-            "Typhoon\\Template\\": "tests/"
+            "Typhoon\\TypeSpec\\": "tests/"
         }
     },
     "config": {
