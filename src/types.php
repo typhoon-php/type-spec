@@ -41,7 +41,7 @@ function types(): \Generator
     yield new Type('classConstantMask', 'mixed', [new Property('objectType', $typeClass, 'Type<object>'), new Property('namePrefix', 'string')]);
     yield new Type('namedObject', 'TObject', [new Property('name', 'string', 'class-string<TObject>'), new Property('templateArguments', 'array', 'list<Type>')], [new Template('TObject', 'object', 'object')]);
     yield new Type('alias', 'mixed', [new Property('classType', $typeClass, 'Type<object>'), new Property('name', 'string', 'non-empty-string'), new Property('templateArguments', 'array', 'list<Type>')]);
-    yield new Type('self', 'TObject', [new Property('resolvedObjectType', '?Type', '?Type<TObject>'), new Property('templateArguments', 'array', 'list<Type>')], [new Template('TObject', 'object', 'object')]);
-    yield new Type('parent', 'TObject', [new Property('resolvedObjectType', '?Type', '?Type<TObject>'), new Property('templateArguments', 'array', 'list<Type>')], [new Template('TObject', 'object', 'object')]);
-    yield new Type('static', 'TObject', [new Property('resolvedObjectType', '?Type', '?Type<TObject>'), new Property('templateArguments', 'array', 'list<Type>')], [new Template('TObject', 'object', 'object')]);
+    yield new Type('self', 'TObject', [new Property('resolvedObjectType', '?' . $typeClass, '?Type<TObject>'), new Property('templateArguments', 'array', 'list<Type>')], [new Template('TObject', 'object', 'object')]);
+    yield new Type('parent', 'TObject', [new Property('resolvedObjectType', '?' . $typeClass, '?Type<TObject>'), new Property('templateArguments', 'array', 'list<Type>')], [new Template('TObject', 'object', 'object')]);
+    yield new Type('static', 'TObject', [new Property('resolvedObjectType', '?' . $typeClass, '?Type<TObject>'), new Property('templateArguments', 'array', 'list<Type>')], [new Template('TObject', 'object', 'object')]);
 }
